@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url(../img/bg.jpeg);
+   background-size: cover;
+   background-position: center;
+}
+
+main {
+   padding: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   width: 100%;
+   max-width: 600px;
+   height: 100%;
+   max-height: 900px;
+   text-align: center;
+   background: rgba(0, 0, 0, 0.6);
+   border-radius: 15px;
+   color: white;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+header img {
+   width: 100px;
+   border-radius: 50%;
+   box-shadow: 0 0 4px 1px #1273B7;
+   margin-bottom: 10px;
+   border: 1px solid white;
+}
+
+h2 {
+   font-weight: 600;
+   text-shadow: 0 0 2px black;
+   margin-bottom: 10px; 
+}
+
+p {
+   opacity: 85%;
+   margin-bottom: 20px;
+}
+
+nav, aside {
+   width: 100%;
+}
+
+nav a, aside a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1.5px solid white;
+   padding: 10px;
+   color: white;
+   text-decoration: none;
+   border-radius: 7px;
+   gap: 15px;
+   transition: 0.3s;
+   margin: 10px 0;
+}
+
+nav a:hover, aside a:hover {
+   background-color: white;
+   color: #333;
+}
+
+footer {
+   margin-top: 20px;
+}
+
+footer a {
+   color: white;
+   font-weight: 600;
+   text-decoration: none;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode main {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.dark-mode nav a, .dark-mode aside a {
+    border-color: black;
+    color: black;
+}
+
+#toggle-mode {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   padding: 10px 10px;
+   font-size: 14px;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   background: rgba(255, 255, 255, 0.7);
+   transition: 0.3s;
+}
+
+#toggle-mode:hover {
+   background: white;
+   color: black;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    #toggle-mode {
+        top: 10px;
+        right: 10px;
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    nav a, aside a {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+nav a, aside a {
+    transition: transform 0.2s, background 0.3s;
+}
+
+nav a:hover, aside a:hover {
+    transform: scale(1.05);
+}
+
+header img {
+    transition: transform 0.3s;
+}
+
+header img:hover {
+    transform: rotate(5deg);
+}
+
+body {
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.dark-mode main {
+    transition: background 0.4s, color 0.4s;
+}
